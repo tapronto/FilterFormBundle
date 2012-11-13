@@ -1,0 +1,23 @@
+{
+    "name": "tapronto/formfilter-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 bundle to automatic generate filter forms for entities, with doctrine 2 integration",
+    "keywords": ["form", "filter"],
+    "homepage": "https://github.com/tapronto/FormFilterBundle",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "2.1.*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "Tapronto\\FormFilterBundle": ""
+        }
+    },
+    "target-dir": "Tapronto/FormFilterBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}
