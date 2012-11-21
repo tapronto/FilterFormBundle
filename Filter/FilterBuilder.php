@@ -2,19 +2,16 @@
 namespace Tapronto\FormFilterBundle\Filter;
 
 class FilterBuilder implements FilterBuilderInterface {
+    private $filters = array();
+    private $options = array();
+
     public function setFilterEntity($entity) {
         $this->filterEntity = $entity;
     }
 
     public function addFilterConstraint($fieldName, $filterType, $filterOptions = array()) {
-        if(!is_array($this->filters))
-            $this->filters = array();
-
-        if(!is_array($this->options))
-            $this->options = array();
-
         $this->filters[$fieldName] = $filterType;
-        $this->options[$fieldName] = $options;
+        $this->options[$fieldName] = $filterOptions;
     }
 
     public function getAllConstraints() {
