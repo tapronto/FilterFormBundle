@@ -1,3 +1,0 @@
-tapronto_form_filter_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: TaprontoFormFilterBundle:Default:index }
