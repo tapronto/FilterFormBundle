@@ -17,7 +17,7 @@
     "target-dir": "Tapronto/FormFilterBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "master"
+            "dev-master": "0.1-dev"
         }
     }
 }
