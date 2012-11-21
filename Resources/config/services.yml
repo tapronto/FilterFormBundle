@@ -1,7 +1,0 @@
-parameters:
-#    tapronto_form_filter.example.class: Tapronto\FormFilterBundle\Example
-
-services:
-#    tapronto_form_filter.example:
-#        class: %tapronto_form_filter.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
