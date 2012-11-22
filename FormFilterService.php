@@ -7,7 +7,7 @@ use Tapronto\FormFilterBundle\Filter\FilterBuilder;
 use Tapronto\FormFilterBundle\Filter\FilterBuilderInterface;
 use Tapronto\FormFilterBundle\Filter\Filter;
 
-class Filter {
+class FormFilterService {
     public function __construct($formFactory) {
         $this->formBuilder = $formFactory->createBuilder('form');
     }
