@@ -1,7 +1,7 @@
 <?php
 namespace Tapronto\FormFilterBundle\Form;
 
-class FormFilter {
+class FilterForm {
     private $form;
     private $filter;
 
