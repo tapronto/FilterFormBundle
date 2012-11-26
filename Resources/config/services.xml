@@ -11,6 +11,7 @@
     <services>
         <service id="tapronto.filterform" class="%tapronto.filterform.service.class%" public="true">
             <argument type="service" id="form.factory" />
+            <argument type="service" id="session" />
         </service>
     </services>
 </container>
