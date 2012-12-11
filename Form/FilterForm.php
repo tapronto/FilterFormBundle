@@ -40,15 +40,26 @@ class FilterForm {
     }
 
     public function getFilterQuery($managerType = 'orm') {
-        $objectManager = null;
-
         if($managerType == 'orm') {
-            $objectManager = $this->getEntityManager();
+            $builder = $this->getEntityManager()->createQueryBuilder($this->getModelClass());
+
+            foreach ($this->getConstraints() as $field => $value) {
+                if($value) {
+                    $builder->where("$field LIKE :param");
+                    $builder->setParameter("%$value%");
+                }
+            }
         } else {
-            $objectManager = $this->getDocumentManager();
+            $builder = $this->getDocumentManager()->getRepository($this->getModelClass())->createQueryBuilder();
+
+            foreach ($this->getConstraints() as $field => $value) {
+                if($value) {
+                    $builder->field($field)->equals(new \MongoRegex("/.*$value.*/"));
+                }
+            }
         }
 
-        return $objectManager->getRepository($this->getModelClass())->findBy($this->getConstraints());
+        return $builder->getQuery();
     }
 
     public function getModelClass() {

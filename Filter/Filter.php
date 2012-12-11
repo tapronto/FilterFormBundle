@@ -25,6 +25,6 @@ class Filter {
     }
 
     public function clearAllConstraints() {
-        $this->session->clear();
+        $this->session->remove('constraints');
     }
 }
