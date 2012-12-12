@@ -62,6 +62,10 @@ class FilterForm {
         return $builder->getQuery();
     }
 
+    public function clearFilter() {
+        $this->filter->clearAllConstraints();
+    }
+
     public function getModelClass() {
         return $this->modelClass;
     }
