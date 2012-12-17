@@ -54,7 +54,7 @@ class FilterForm {
 
             foreach ($this->getConstraints() as $field => $value) {
                 if($value) {
-                    $builder->field($field)->equals(new \MongoRegex("/.*$value.*/"));
+                    $builder->field($field)->equals(new \MongoRegex("/.*$value.*/i"));
                 }
             }
         }
